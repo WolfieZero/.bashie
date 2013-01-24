@@ -3,7 +3,7 @@
 # Config
 # -----------------------------------------------------------------------------
 
-source "config"
+source "${HOME}/.bashie/config"
 
 # Default editor
 EDITOR="subl" # sublime
