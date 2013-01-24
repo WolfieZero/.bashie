@@ -1,0 +1,51 @@
+#!/bin/bash
+
+# Fuctions
+# -----------------------------------------------------------------------------
+
+# Restart Apache easily
+apache () {
+    sudo apachectl $1
+    echo -e "\033[0;35m"
+    echo "$1 apache"
+    notice-end
+}
+
+# Make the file and open it
+makeopen () {
+    touch $1 | e $1
+}
+
+# Formats unix timestamp
+todate () {
+    echo -e "\033[0;33m"
+    perl -e "require 'ctime.pl'; print &ctime($1);"
+    notice-end
+}
+
+# Connect notice for ssh
+notice-connect () {
+    echo -e "\033[0;32m"
+    echo -e "Connecting to \033[1;32m$1\033[0;32m"
+    notice-end
+}
+
+# Get IP
+ip () {
+    echo -e "\033[0;33m"
+    echo "Outside IP"
+    dig +short myip.opendns.com @resolver1.opendns.com
+    notice-end
+}
+
+# End of notice
+notice-start () {
+    echo "------------------------------------------------------------"
+    echo -e "\033[0m" 
+}
+
+# End of notice
+notice-end () {
+    echo "------------------------------------------------------------"
+    echo -e "\033[0m" 
+}

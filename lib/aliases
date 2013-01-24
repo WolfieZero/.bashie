@@ -1,0 +1,44 @@
+# Aliases
+# -----------------------------------------------------------------------------
+
+# Default editor
+alias e=$EDITOR
+
+# Websites
+alias sites="cd ~/Sites/"
+
+# Apache Hosts
+alias vhosts="e /private/etc/apache2/extra/httpd-vhosts.conf"
+
+# System Hosts
+alias hosts="e /etc/hosts"
+
+# Downloads
+alias downloads="cd ~/Downloads/"
+alias downloads-view="sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'select LSQuarantineDataURLString from LSQuarantineEvent'"
+alias downloads-deletehistory="sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"
+
+# Back a folder
+alias ..="cd .."
+
+# List all files colorized in long format
+alias ll="ls -Gl"
+
+# Show hidden
+alias la="ls -Gla"
+
+# Local Tunnel - http://progrium.com/localtunnel/
+alias tunnel="localtunnel"
+
+# Only dirs
+alias ld='ls -l | grep "^d"'
+
+# Artisan for Laravel (still need to cd into directory)
+alias artisan='php artisan'
+
+# Convert Easting/Northing to Lat/Long
+alias en-ll='php ~/sites/_scripts/en_to_ll.php'
+
+# Show/hide hidden files in Finder
+alias show="defaults write com.apple.Finder AppleShowAllFiles -bool true && killall Finder"
+alias hide="defaults write com.apple.Finder AppleShowAllFiles -bool false && killall Finder"

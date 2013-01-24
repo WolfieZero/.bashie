@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Config
+# -----------------------------------------------------------------------------
+
+# User downloads directory
+DOWNLOADS_DIR="${HOME}/Downloads/"
+
+# Bashie lib folder
+BASHIE_LIB="${HOME}/.bashie/lib"
+
+# Default editor
+EDITOR="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl" 
