@@ -94,7 +94,7 @@ else
   read -p "Create .bashie symlinks and overwrite existing bash dotfiles? (y/n) " -n 1
   echo
   if [[ $REPLY =~ ^[Yy]$ ]]; then
-    linkIt
+    bashieInstall
   fi
 fi
 unset bashieInstall
