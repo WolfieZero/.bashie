@@ -36,7 +36,7 @@ BASHIE_DIR="$(dirname "$0")"
 
 
 # Add new terminal functionality
-function bashieAdd() {
+function bashieAdd () {
 
   if ! cmd_loc="$(type -p "$1")" || [ -z "$cmd_loc" ]; then
     echo "$1 installing"
@@ -49,7 +49,7 @@ function bashieAdd() {
 
 
 # Install
-function bashieInstall() {
+function bashieInstall () {
 
   #----------------------------
   # ----- Create symlinks -----
