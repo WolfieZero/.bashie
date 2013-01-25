@@ -34,12 +34,6 @@ echo '
 # .bashie directory
 BASHIE_DIR="$(dirname "$0")"
 
-# Avoid creating .DS_Store files on network volumes
-defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
-
-# Prevent Time Machine from prompting to use new hard drives as backup volume
-defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
-
 
 # Add new terminal functionality
 function bashieAdd() {
@@ -68,6 +62,11 @@ function bashieInstall() {
   # Check if mac
   if [ `uname` = "Darwin" ]; then
 
+    # Avoid creating .DS_Store files on network volumes
+    defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+
+    # Prevent Time Machine from prompting to use new hard drives as backup volume
+    defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 
     # Install new functionality
     bashieAdd brew 'ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"'
