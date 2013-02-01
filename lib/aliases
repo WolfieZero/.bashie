@@ -42,3 +42,9 @@ alias en-ll='php ~/sites/_scripts/en_to_ll.php'
 # Show/hide hidden files in Finder
 alias show="defaults write com.apple.Finder AppleShowAllFiles -bool true && killall Finder"
 alias hide="defaults write com.apple.Finder AppleShowAllFiles -bool false && killall Finder"
+
+# Run Javascript
+alias js=/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc
+
+# Run Ruby
+alias ruby=irb
