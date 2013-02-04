@@ -48,3 +48,6 @@ alias js=/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Re
 
 # Run Ruby
 alias ruby=irb
+
+# CSS Ratiocinator
+alias csstrash='phantomjs ~/Sites/_scripts/ratiocinate.js'
