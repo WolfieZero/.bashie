@@ -50,4 +50,4 @@ alias js=/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Re
 alias ruby=irb
 
 # CSS Ratiocinator
-alias csstrash='phantomjs ~/Sites/_scripts/ratiocinate.js'
+alias csstrash='phantomjs ~/Sites/_scripts/css-ratiocinator/ratiocinate.js'
