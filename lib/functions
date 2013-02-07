@@ -3,6 +3,15 @@
 # Fuctions
 # -----------------------------------------------------------------------------
 
+
+# Update .bashie
+update-bashie () {
+    cd ~/.bashie/
+    git pull
+    source ~/.bash_profile
+    cd
+}
+
 # Restart Apache easily
 apache () {
     sudo apachectl $1
