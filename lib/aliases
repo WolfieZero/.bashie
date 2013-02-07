@@ -4,8 +4,23 @@
 # Default editor
 alias e=$EDITOR
 
-# Websites
+# Sites
 alias sites="cd ~/Sites/"
+
+# Sites Labs
+alias sites-labs="cd ~/Sites/Labs/"
+
+# Sites Fubra
+alias sites-fubra="cd ~/Sites/Fubra/"
+
+# Sites Clients
+alias sites-clients="cd ~/Sites/Clients/"
+
+# Sites Projects
+alias sites-projects="cd ~/Sites/Projects/"
+
+# Sites Personal
+alias sites-personal="cd ~/Sites/Personal/"
 
 # Apache Hosts
 alias vhosts="e /private/etc/apache2/extra/httpd-vhosts.conf"
