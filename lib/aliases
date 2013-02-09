@@ -4,6 +4,9 @@
 # Default editor
 alias e=$EDITOR
 
+# Clone Templatie
+alias get-templatie="git clone https://github.com/WolfieZero/templatie.git $1"
+
 # Sites
 alias sites="cd ~/Sites/"
 
