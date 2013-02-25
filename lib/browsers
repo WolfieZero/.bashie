@@ -1,5 +1,10 @@
 # Stole this from Addy Osmani - https://github.com/addyosmani/dotfiles/blob/master/.functions
 
+alias safari="open -a safari"
+alias firefox="open -a firefox"
+alias opera="open -a opera"
+alias chrome="open -a google\ chrome"
+
 # Launch installed browsers for a specific URL
 # Usage: browsers "http://www.google.com"
 function browsers(){

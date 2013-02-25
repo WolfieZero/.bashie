@@ -4,9 +4,6 @@
 # Default editor
 alias e=$EDITOR
 
-# Clone Templatie
-alias get-templatie="git clone https://github.com/WolfieZero/templatie.git $1"
-
 # Sites
 alias sites="cd ~/Sites/"
 
@@ -60,6 +57,9 @@ alias en-ll='php ~/sites/_scripts/en_to_ll.php'
 # Show/hide hidden files in Finder
 alias show="defaults write com.apple.Finder AppleShowAllFiles -bool true && killall Finder"
 alias hide="defaults write com.apple.Finder AppleShowAllFiles -bool false && killall Finder"
+
+# Delete easily
+alias delete="rm -rf $1"
 
 # Run Javascript
 alias js=/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc

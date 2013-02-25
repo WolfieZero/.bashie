@@ -32,25 +32,60 @@ todate () {
     notice-end
 }
 
-# Connect notice for ssh
-notice-connect () {
-    echo -e "\033[0;32m"
-    echo -e "Connecting to \033[1;32m$1\033[0;32m"
-    notice-end
-}
+
 
 # Get IP
 ip () {
-    echo -e "\033[0;33m"
+    noitce-start
     echo "Outside IP"
     dig +short myip.opendns.com @resolver1.opendns.com
     notice-end
 }
 
-# End of notice
+
+# Install Laravel and configure
+install-laravel () {
+    notice-start
+    echo "Installing Laravel into '$1'"
+    notice-end
+
+    git clone https://github.com/laravel/laravel.git $1
+    cd $1
+    
+    # Required for getting L4 dev
+    git reset --hard HEAD
+    git checkout develop
+
+    # Do the house cleaning
+    chmod -R 0777 app/storage
+    composer install
+    artisan key:generate
+    rm -rf .git
+}
+
+
+# Install Templatie
+install-templatie () {
+    notice-start
+    echo "Installing Templatie into $1"
+    notice-end
+    git clone https://github.com/WolfieZero/templatie.git $1
+    cd $1
+    rm -rf .git
+}
+
+
+# Connect notice for ssh
+notice-connect () {
+    notice-start
+    echo -e "Connecting to \033[1;32m$1\033[0;32m"
+    notice-end
+}
+
+
+# Start of notice
 notice-start () {
-    echo "------------------------------------------------------------"
-    echo -e "\033[0m" 
+    echo -e "\033[0;35m"
 }
 
 # End of notice
