@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# Laravel 
+# =============================================================================
+
+
+# Install Laravel and configure
+# -----------------------------------------------------------------------------
+
+install-laravel () {
+    notice-start
+    echo "Installing Laravel into '$1'"
+    notice-end
+
+    git clone https://github.com/laravel/laravel.git $1
+    cd $1
+
+    # Do the house cleaning
+    composer install
+    artisan key:generate
+    chmod -R 0777 app/storage/
+    rm -rf .git
+}
+
+
+# Artisan for Laravel (still need to cd into directory)
+# -----------------------------------------------------------------------------
+
+alias artisan='php artisan'

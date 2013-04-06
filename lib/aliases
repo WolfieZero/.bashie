@@ -1,8 +1,50 @@
 # Aliases
-# -----------------------------------------------------------------------------
+# =============================================================================
+
 
 # Default editor
 alias e=$EDITOR
+
+# Apache Hosts
+alias vhosts="e /private/etc/apache2/extra/httpd-vhosts.conf"
+
+# System Hosts
+alias hosts="e /etc/hosts"
+
+# Download Actions
+# -----------------------------------------------------------------------------
+
+# Quick Access Downloads
+alias downloads="cd ~/Downloads/"
+
+# View Recent Donwloads
+alias downloads-view="sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'select LSQuarantineDataURLString from LSQuarantineEvent'"
+
+# Delete Download History
+alias downloads-deletehistory="sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"
+
+
+# Folder Actions
+# -----------------------------------------------------------------------------
+
+# Back a folder
+alias ..="cd .."
+
+# List all files colorized in long format
+alias list-files="ls -Gl"
+
+# Show hidden
+alias hidden-fules="ls -Gla"
+
+# Only dirs
+alias directories='ls -l | grep "^d"'
+
+# Symbolic Link
+alias link='ln -s $1'
+
+
+# Quick Access Site Folders
+# -----------------------------------------------------------------------------
 
 # Sites
 alias sites="cd ~/Sites/"
@@ -22,34 +64,15 @@ alias sites-projects="cd ~/Sites/Projects/"
 # Sites Personal
 alias sites-personal="cd ~/Sites/Personal/"
 
-# Apache Hosts
-alias vhosts="e /private/etc/apache2/extra/httpd-vhosts.conf"
+# Sites WordPress
+alias sites-wp="cd ~/Sites/_mu/"
 
-# System Hosts
-alias hosts="e /etc/hosts"
 
-# Downloads
-alias downloads="cd ~/Downloads/"
-alias downloads-view="sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'select LSQuarantineDataURLString from LSQuarantineEvent'"
-alias downloads-deletehistory="sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"
-
-# Back a folder
-alias ..="cd .."
-
-# List all files colorized in long format
-alias ll="ls -Gl"
-
-# Show hidden
-alias la="ls -Gla"
+# Tell me the time
+alias thetime=date
 
 # Local Tunnel - http://progrium.com/localtunnel/
 alias tunnel="localtunnel"
-
-# Only dirs
-alias ld='ls -l | grep "^d"'
-
-# Artisan for Laravel (still need to cd into directory)
-alias artisan='php artisan'
 
 # Convert Easting/Northing to Lat/Long
 alias en-ll='php ~/sites/_scripts/en_to_ll.php'
@@ -60,6 +83,9 @@ alias hide="defaults write com.apple.Finder AppleShowAllFiles -bool false && kil
 
 # Delete easily
 alias delete="rm -rf $1"
+
+# Delete easily, please
+alias delete-please="sudo rm -rf $1"
 
 # Run Javascript
 alias js=/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc

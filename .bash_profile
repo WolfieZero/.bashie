@@ -22,3 +22,6 @@ for f in `ls $BASHIE_LIB`
 do
     source $BASHIE_LIB"/"$f
 done
+
+#source "${HOME}/.bashie/wp-cli/bin/wp"
+#source "${HOME}/.bashie/wp-cli/utils/wp-completion.bash"

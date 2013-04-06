@@ -1,0 +1,40 @@
+#!/bin/bash
+
+# Bashie Functions
+# =============================================================================
+
+# Update .bashie
+bashie-update () {
+
+    notice-start
+    echo 'Updating .bashie'
+    notice-end
+
+    cd ~/.bashie/
+    git pull
+    source ~/.bash_profile
+    cd
+
+}
+
+# Reload .bashie
+bashie-reload () {
+
+    notice-start
+    echo 'Reloading .bashie'
+    notice-end
+
+    source ~/.bash_profile
+    
+}
+
+# Edit .bashie
+bashie-edit () {
+
+    notice-start
+    echo 'Editing .bashie'
+    notice-end
+
+    e ~/.bashie
+    
+}

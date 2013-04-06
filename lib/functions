@@ -4,14 +4,6 @@
 # -----------------------------------------------------------------------------
 
 
-# Update .bashie
-update-bashie () {
-    cd ~/.bashie/
-    git pull
-    source ~/.bash_profile
-    cd
-}
-
 # Restart Apache easily
 apache () {
     sudo apachectl $1
@@ -40,27 +32,6 @@ ip () {
     echo "Outside IP"
     dig +short myip.opendns.com @resolver1.opendns.com
     notice-end
-}
-
-
-# Install Laravel and configure
-install-laravel () {
-    notice-start
-    echo "Installing Laravel into '$1'"
-    notice-end
-
-    git clone https://github.com/laravel/laravel.git $1
-    cd $1
-    
-    # Required for getting L4 dev
-    git reset --hard HEAD
-    git checkout develop
-
-    # Do the house cleaning
-    composer install
-    artisan key:generate
-    chmod -R 0777 app/storage/
-    rm -rf .git
 }
 
 

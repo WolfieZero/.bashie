@@ -1,0 +1,52 @@
+#!/bin/bash
+
+# WordPress
+# =============================================================================
+
+
+# Make Theme
+# -----------------------------------------------------------------------------
+
+wp-make-theme () {
+
+    notice-start
+    echo "Making Theme in '$1'"
+    notice-end
+
+    # Make a move to the directory
+    mkdir $1
+    cd $1
+
+    echo 'task goes here' | cat - todo.txt > temp && mv temp todo.txt
+
+    touch style.css
+    touch index.php
+    touch functions.php
+
+}
+
+
+# Install
+# -----------------------------------------------------------------------------
+
+install-wp () {
+
+    notice-start
+    echo "Installing WordPress in '$1'"
+    notice-end
+
+    wget http://wordpress.org/latest.zip
+    unzip latest.zip
+    mv wordpress $1
+    #rm -rf latest.zip
+    delete latest.zip
+
+    cd $1
+    #rm -rf wp-content/plugins/hello.php
+    delete wp-content/plugins/hello.php
+    #rm -rf wp-content/themes/twentyten/
+    delete wp-content/themes/twentyten/
+    #rm -rf wp-content/themes/twentyeleven/
+    delete wp-content/themes/twentyeleven/
+    
+}
