@@ -5,7 +5,7 @@
 # The difference is that this script lives in the plugin's git repo & doesn't require an existing SVN repo.
 # Source: https://github.com/thenbrent/multisite-user-management/blob/master/deploy.sh
 
-git-wp () {
+function git_wp () {
  
     #prompt for plugin slug
     echo -e "Plugin Slug: \c"

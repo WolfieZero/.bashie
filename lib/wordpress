@@ -7,11 +7,11 @@
 # Make Theme
 # -----------------------------------------------------------------------------
 
-wp-make-theme () {
+function wp_make_theme () {
 
-    notice-start
+    notice_start
     echo "Making Theme in '$1'"
-    notice-end
+    notice_end
 
     # Make a move to the directory
     mkdir $1
@@ -29,11 +29,11 @@ wp-make-theme () {
 # Install
 # -----------------------------------------------------------------------------
 
-install-wp () {
+function wp_install () {
 
-    notice-start
+    notice_start
     echo "Installing WordPress in '$1'"
-    notice-end
+    notice_end
 
     wget http://wordpress.org/latest.zip
     unzip latest.zip

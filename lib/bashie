@@ -4,11 +4,11 @@
 # =============================================================================
 
 # Update .bashie
-bashie-update () {
+function bashie_update () {
 
-    notice-start
+    notice_start
     echo 'Updating .bashie'
-    notice-end
+    notice_end
 
     cd ~/.bashie/
     git pull
@@ -18,22 +18,22 @@ bashie-update () {
 }
 
 # Reload .bashie
-bashie-reload () {
+function bashie_reload () {
 
-    notice-start
+    notice_start
     echo 'Reloading .bashie'
-    notice-end
+    notice_end
 
     source ~/.bash_profile
     
 }
 
 # Edit .bashie
-bashie-edit () {
+function bashie_edit () {
 
-    notice-start
+    notice_start
     echo 'Editing .bashie'
-    notice-end
+    notice_end
 
     e ~/.bashie
     

@@ -5,41 +5,41 @@
 
 
 # Restart Apache easily
-apache () {
+function apache () {
     sudo apachectl $1
     echo -e "\033[0;35m"
     echo "$1 apache"
-    notice-end
+    notice_end
 }
 
 # Make the file and open it
-makeopen () {
+function makeopen () {
     touch $1 | e $1
 }
 
 # Formats unix timestamp
-todate () {
+function todate () {
     echo -e "\033[0;33m"
     perl -e "require 'ctime.pl'; print &ctime($1);"
-    notice-end
+    notice_end
 }
 
 
 
 # Get IP
-ip () {
+function ip () {
     noitce-start
     echo "Outside IP"
     dig +short myip.opendns.com @resolver1.opendns.com
-    notice-end
+    notice_end
 }
 
 
 # Install Templatie
-install-templatie () {
-    notice-start
+function install_templatie () {
+    notice_start
     echo "Installing Templatie into $1"
-    notice-end
+    notice_end
     git clone https://github.com/WolfieZero/templatie.git $1
     cd $1
     rm -rf .git
@@ -47,20 +47,20 @@ install-templatie () {
 
 
 # Connect notice for ssh
-notice-connect () {
-    notice-start
+function notice_connect () {
+    notice_start
     echo -e "Connecting to \033[1;32m$1\033[0;32m"
-    notice-end
+    notice_end
 }
 
 
 # Start of notice
-notice-start () {
+function notice_start () {
     echo -e "\033[0;35m"
 }
 
 # End of notice
-notice-end () {
+function notice_end () {
     echo "------------------------------------------------------------"
     echo -e "\033[0m" 
 }

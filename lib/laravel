@@ -7,13 +7,15 @@
 # Install Laravel and configure
 # -----------------------------------------------------------------------------
 
-install-laravel () {
-    notice-start
+function install_laravel () {
+    notice_start
     echo "Installing Laravel into '$1'"
-    notice-end
+    notice_end
 
     git clone https://github.com/laravel/laravel.git $1
     cd $1
+
+    git checkout develop
 
     # Do the house cleaning
     composer install

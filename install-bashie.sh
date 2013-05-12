@@ -68,13 +68,11 @@ function bashieInstall () {
     # Prevent Time Machine from prompting to use new hard drives as backup volume
     defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 
-    # Install new functionality
-    bashieAdd brew 'ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"'
-    bashieAdd tree 'brew install tree'
-    bashieAdd tree 'brew install wget'
+    # Sublime from terminal
+    ln -s /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
 
     # Get rid of the function
-    unset bashieAdd
+   # unset bashieAdd
 
     # Source it
     source ~/.bash_profile

@@ -42,6 +42,9 @@ alias directories='ls -l | grep "^d"'
 # Symbolic Link
 alias link='ln -s $1'
 
+# Start server
+alias start-server='python -m SimpleHTTPServer $1'
+
 
 # Quick Access Site Folders
 # -----------------------------------------------------------------------------
@@ -90,8 +93,6 @@ alias delete-please="sudo rm -rf $1"
 # Run Javascript
 alias js=/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc
 
-# Run Ruby
-alias ruby=irb
-
 # CSS Ratiocinator
 alias csstrash='phantomjs ~/Sites/_scripts/css-ratiocinator/ratiocinate.js'
+
