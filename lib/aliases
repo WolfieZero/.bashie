@@ -45,6 +45,12 @@ alias link='ln -s $1'
 # Start server
 alias start-server='python -m SimpleHTTPServer $1'
 
+# Compress
+alias compress='tar -jcvf $1 $2'
+
+# Uncompress
+alias uncompress='tar -jxvf $1'
+
 
 # Quick Access Site Folders
 # -----------------------------------------------------------------------------

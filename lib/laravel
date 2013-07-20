@@ -12,13 +12,11 @@ function install_laravel () {
     echo "Installing Laravel into '$1'"
     notice_end
 
-    git clone https://github.com/laravel/laravel.git $1
+    composer create-project laravel/laravel $1
+
     cd $1
 
-    git checkout develop
-
     # Do the house cleaning
-    composer install
     artisan key:generate
     chmod -R 0777 app/storage/
     rm -rf .git
