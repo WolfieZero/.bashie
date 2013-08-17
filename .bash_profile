@@ -5,9 +5,6 @@
 
 source "${HOME}/.bashie/config"
 
-# Default editor
-EDITOR="subl" # sublime
-
 # Add colour to the terminal
 export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
