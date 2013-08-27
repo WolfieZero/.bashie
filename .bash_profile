@@ -24,6 +24,3 @@ done
 #source "${HOME}/.bashie/wp-cli/utils/wp-completion.bash"
 
 export PATH=$PATH:/usr/local/mysql/bin
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
-export PATH=${PATH}:/Development/android-sdk/platform-tools:/Development/android-sdk/tools

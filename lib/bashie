@@ -3,38 +3,53 @@
 # Bashie Functions
 # =============================================================================
 
-# Update .bashie
-function bashie_update () {
+function bashie () {
 
-    notice_start
-    echo 'Updating .bashie'
-    notice_end
+    case $1 in
+    "update")
 
-    cd ~/.bashie/
-    git pull
-    source ~/.bash_profile
-    cd
+        notice_start
+        echo 'Updating .bashie'
+        notice_end
 
-}
+        cd ~/.bashie/
+        git pull
+        source ~/.bash_profile
+        cd
 
-# Reload .bashie
-function bashie_reload () {
+    ;;
+    "reload")
 
-    notice_start
-    echo 'Reloading .bashie'
-    notice_end
+        notice_start
+        echo 'Reloading .bashie'
+        notice_end
 
-    source ~/.bash_profile
-    
-}
+        source ~/.bash_profile
 
-# Edit .bashie
-function bashie_edit () {
+    ;;
+    "edit")
 
-    notice_start
-    echo 'Editing .bashie'
-    notice_end
+        notice_start
+        echo 'Editing .bashie'
+        notice_end
 
-    e ~/.bashie
-    
+        e ~/.bashie
+
+    ;;
+    "push")
+
+        notice_start
+        echo 'Pushing .bashie'
+        notice_end
+
+        cd ~/.bashie/
+        git add .
+        git commit -m "auto push"
+        git push
+        source ~/.bash_profile
+        cd
+
+    ;;
+    esac
+
 }

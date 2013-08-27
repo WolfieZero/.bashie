@@ -34,7 +34,8 @@ Run the following in your home folder
 
 Once successfully cloned onto your system you can run the install script
 
-    sh .bashie/install-bashie.sh
+    cd .bashie
+    sh install-bashie.sh
 
 Follow the prompt and all should be good!
 
