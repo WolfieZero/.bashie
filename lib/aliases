@@ -33,14 +33,14 @@ alias ..="cd .."
 # List all files colorized in long format
 alias list-files="ls -Gl"
 
-# Show hidden
-alias hidden-fules="ls -Gla"
+# Show all files (inc. hidden) colorized in long format
+alias list="ls -Gla"
 
 # Only dirs
 alias directories='ls -l | grep "^d"'
 
 # Symbolic Link
-alias link='ln -s $1'
+alias link='ln -s $1 $2'
 
 # Start server
 alias start-server='python -m SimpleHTTPServer $1'
