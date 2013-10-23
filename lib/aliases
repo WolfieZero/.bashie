@@ -1,3 +1,4 @@
+
 # Aliases
 # =============================================================================
 
@@ -10,6 +11,7 @@ alias vhosts="e /private/etc/apache2/extra/httpd-vhosts.conf"
 
 # System Hosts
 alias hosts="e /etc/hosts"
+
 
 # Download Actions
 # -----------------------------------------------------------------------------
@@ -27,17 +29,20 @@ alias downloads-deletehistory="sqlite3 ~/Library/Preferences/com.apple.LaunchSer
 # Folder Actions
 # -----------------------------------------------------------------------------
 
-# Back a folder
+# Down a folder
 alias ..="cd .."
 
-# List all files colorized in long format
-alias list-files="ls -Gl"
+# Back a folder action
+alias b="cd -"
 
 # Show all files (inc. hidden) colorized in long format
-alias list="ls -Gla"
+alias l="ls -Gla"
+
+# List all files colorized in long format
+alias l-files="ls -Gl"
 
 # Only dirs
-alias directories='ls -l | grep "^d"'
+alias l-dir='ls -l | grep "^d"'
 
 # Symbolic Link
 alias link='ln -s $1 $2'
@@ -58,24 +63,8 @@ alias uncompress='tar -jxvf $1'
 # Sites
 alias sites="cd ~/Sites/"
 
-# Sites Labs
-alias sites-labs="cd ~/Sites/Labs/"
-
-# Sites Fubra
-alias sites-fubra="cd ~/Sites/Fubra/"
-
-# Sites Clients
-alias sites-clients="cd ~/Sites/Clients/"
-
-# Sites Projects
-alias sites-projects="cd ~/Sites/Projects/"
-
-# Sites Personal
-alias sites-personal="cd ~/Sites/Personal/"
-
-# Sites WordPress
-alias sites-wp="cd ~/Sites/_mu/"
-
+# Development
+alias dev="cd ~/Development/"
 
 # Tell me the time
 alias thetime=date
