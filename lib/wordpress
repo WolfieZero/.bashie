@@ -4,24 +4,34 @@
 # =============================================================================
 
 
+function wordpress() {
+
+    case $1 in
+    "install")
+        _wp_install $1
+    ;;
+    "theme")
+        _wp_make_theme $1
+    ;;
+    esac
+
+}
+
+
+
 # Make Theme
 # -----------------------------------------------------------------------------
 
-function wp_make_theme () {
+function _wp_make_theme () {
 
     notice_start
-    echo "Making Theme in '$1'"
+    echo "Making Theme"
     notice_end
 
-    # Make a move to the directory
-    mkdir $1
-    cd $1
+    git clone git@github.com:Automattic/_s.git .
 
-    echo 'task goes here' | cat - todo.txt > temp && mv temp todo.txt
 
-    touch style.css
-    touch index.php
-    touch functions.php
+    echo 'task goes here' | cat - TODO.md > temp && mv temp TODO.md
 
 }
 
@@ -29,24 +39,13 @@ function wp_make_theme () {
 # Install
 # -----------------------------------------------------------------------------
 
-function wp_install () {
+function _wp_install () {
 
     notice_start
-    echo "Installing WordPress in '$1'"
+    echo "Installing WordPress"
     notice_end
 
-    wget http://wordpress.org/latest.zip
-    unzip latest.zip
-    mv wordpress $1
-    #rm -rf latest.zip
-    delete latest.zip
+    composer create-project wolfiezero/wp-kickstart ./
+    delete vendor
 
-    cd $1
-    #rm -rf wp-content/plugins/hello.php
-    delete wp-content/plugins/hello.php
-    #rm -rf wp-content/themes/twentyten/
-    delete wp-content/themes/twentyten/
-    #rm -rf wp-content/themes/twentyeleven/
-    delete wp-content/themes/twentyeleven/
-    
 }

@@ -1,4 +1,6 @@
+#!/bin/bash
 
+# =============================================================================
 # Aliases
 # =============================================================================
 
@@ -12,10 +14,6 @@ alias vhosts="e /private/etc/apache2/extra/httpd-vhosts.conf"
 # System Hosts
 alias hosts="e /etc/hosts"
 
-
-# Download Actions
-# -----------------------------------------------------------------------------
-
 # Quick Access Downloads
 alias downloads="cd ~/Downloads/"
 
@@ -24,10 +22,6 @@ alias downloads-view="sqlite3 ~/Library/Preferences/com.apple.LaunchServices.Qua
 
 # Delete Download History
 alias downloads-deletehistory="sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"
-
-
-# Folder Actions
-# -----------------------------------------------------------------------------
 
 # Down a folder
 alias ..="cd .."
@@ -55,10 +49,6 @@ alias compress='tar -jcvf $1 $2'
 
 # Uncompress
 alias uncompress='tar -jxvf $1'
-
-
-# Quick Access Site Folders
-# -----------------------------------------------------------------------------
 
 # Sites
 alias sites="cd ~/Sites/"
