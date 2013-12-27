@@ -1,0 +1,37 @@
+#!/bin/bash
+
+# =============================================================================
+# Sublime Text 3 Function
+# =============================================================================
+
+
+function sublime () {
+
+    case $1 in
+    "update")
+
+        notice_start
+        echo 'Updating Sublime Text 3 Repo'
+        notice_end
+
+        cd ~/Library/Application\ Support/Sublime\ Text\ 3
+        git pull
+        cd
+
+    ;;
+    "push")
+
+        notice_start
+        echo 'Pushing Sublime Text 3 to Repo'
+        notice_end
+
+        cd ~/Library/Application\ Support/Sublime\ Text\ 3
+        git add .
+        git commit -m "auto push"
+        git push
+        cd
+
+    ;;
+    esac
+
+}
