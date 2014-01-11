@@ -8,10 +8,10 @@
 function sublime () {
 
     case $1 in
-    "update")
+    "push")
 
         notice_start
-        echo 'Updating Sublime Text 3 Repo'
+        echo 'Pushing Sublime Text 3 to Repo'
         notice_end
 
         cd ~/Library/Application\ Support/Sublime\ Text\ 3
@@ -19,10 +19,10 @@ function sublime () {
         cd
 
     ;;
-    "push")
+    "update")
 
         notice_start
-        echo 'Pushing Sublime Text 3 to Repo'
+        echo 'Updating Sublime Text 3 from Repo'
         notice_end
 
         cd ~/Library/Application\ Support/Sublime\ Text\ 3
