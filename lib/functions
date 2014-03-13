@@ -35,17 +35,6 @@ function ip () {
 }
 
 
-# Install Templatie
-function install_templatie () {
-    notice_start
-    echo "Installing Templatie into $1"
-    notice_end
-    git clone https://github.com/WolfieZero/templatie.git $1
-    cd $1
-    rm -rf .git
-}
-
-
 # Connect notice for ssh
 function notice_connect () {
     notice_start
@@ -62,5 +51,5 @@ function notice_start () {
 # End of notice
 function notice_end () {
     echo "------------------------------------------------------------"
-    echo -e "\033[0m" 
+    echo -e "\033[0m"
 }

@@ -9,19 +9,21 @@
 # Install Laravel and configure
 # -----------------------------------------------------------------------------
 
-function laravel_install () {
-    notice_start
-    echo "Installing Laravel into '$1'"
-    notice_end
 
-    composer create-project laravel/laravel $1 --prefer-dist
+function laravel () {
 
-    cd $1
+    case $1 in
+    "install")
 
-    # Do the house cleaning
-    #artisan key:generate
-    chmod -R 0777 app/storage/
-    rm -rf .git
+        notice_start
+        echo 'Installing Laravel'
+        notice_end
+
+        composer create-project laravel/laravel $2
+
+    ;;
+    esac
+
 }
 
 

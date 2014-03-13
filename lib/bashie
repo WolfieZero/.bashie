@@ -6,7 +6,7 @@
 function bashie () {
 
     case $1 in
-    "update")
+    "pull")
 
         notice_start
         echo 'Updating .bashie'
