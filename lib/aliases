@@ -81,3 +81,5 @@ alias js=/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Re
 # CSS Ratiocinator
 alias csstrash='phantomjs ~/Sites/_scripts/css-ratiocinator/ratiocinate.js'
 
+# Copy public DSA key to clipboard
+alias sshkey="cat ~/.ssh/id_dsa.pub | pbcopy && echo 'Copied to clipboard.'"
