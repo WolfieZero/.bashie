@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# =============================================================================
+# Folder shortcuts
+# =============================================================================
+
+
+# Sites
+alias sites="cd ~/Sites/"
+
+# Development
+alias dev="cd ~/Development/"
+
+# Clients
+alias clients="cd ~/Clients/"
+
+# Voluments
+alias vols="cd /Volumes/"

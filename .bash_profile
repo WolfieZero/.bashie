@@ -21,7 +21,7 @@ do
     source $BASHIE_LIB"/"$f
 done
 
-
+export PATH="$(brew --prefix php54)/bin:$PATH"
 # -----------------------------------------------------------------------------
 # Load paths
 # -----------------------------------------------------------------------------
@@ -29,8 +29,8 @@ done
 #source "${HOME}/.bashie/wp-cli/bin/wp"
 #source "${HOME}/.bashie/wp-cli/utils/wp-completion.bash"
 
-#export PATH=$PATH:/usr/local/mysql/bin
 export PATH=/usr/local/bin:$PATH
+export PATH="$(brew --prefix php54)/bin:$PATH"
 #export PATH=/usr/local/Cellar/php54/5.4.21/bin:$PATH
 #export PATH=/usr/local/Cellar/php54/5.4.23/bin:$PATH
 #export PATH=/usr/local/Cellar/mariadb/5.5.32/bin:$PATH
