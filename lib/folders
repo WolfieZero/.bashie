@@ -16,3 +16,6 @@ alias clients="cd ~/Clients/"
 
 # Voluments
 alias vols="cd /Volumes/"
+
+# Voluments
+alias box="cd ~/Dropbox/"
