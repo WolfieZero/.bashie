@@ -21,22 +21,19 @@ do
     source $BASHIE_LIB"/"$f
 done
 
-export PATH="$(brew --prefix php54)/bin:$PATH"
+
 # -----------------------------------------------------------------------------
-# Load paths
+# Load paths (for MacOS)
 # -----------------------------------------------------------------------------
 
-#source "${HOME}/.bashie/wp-cli/bin/wp"
-#source "${HOME}/.bashie/wp-cli/utils/wp-completion.bash"
+if [ `uname` = "Darwin" ]; then
+    export PATH=/usr/local/bin:$PATH
+    export PATH="$(brew --prefix php54)/bin:$PATH"
 
-export PATH=/usr/local/bin:$PATH
-export PATH="$(brew --prefix php54)/bin:$PATH"
-#export PATH=/usr/local/Cellar/php54/5.4.21/bin:$PATH
-#export PATH=/usr/local/Cellar/php54/5.4.23/bin:$PATH
-#export PATH=/usr/local/Cellar/mariadb/5.5.32/bin:$PATH
+    # VirtualBox Setup
+    export PATH=$PATH:/Applications/VirtualBox.app/Contents/MacOS/
+fi
 
-# VirtualBox Setup
-export PATH=$PATH:/Applications/VirtualBox.app/Contents/MacOS/
 
 
 # -----------------------------------------------------------------------------
