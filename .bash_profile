@@ -31,6 +31,12 @@ if [ `uname` = "Darwin" ]; then
 
     # VirtualBox Setup
     export PATH=$PATH:/Applications/VirtualBox.app/Contents/MacOS/
+
+else
+  notice_start
+  echo '------------------------------------------------------------'
+  echo 'Hostname: '`hostname`
+  notice_end
 fi
 
 
