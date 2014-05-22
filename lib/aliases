@@ -1,29 +1,46 @@
 #!/bin/bash
 
-# =============================================================================
+# ==============================================================================
 # Aliases
-# =============================================================================
+# ==============================================================================
 
 
 # Default editor
 alias e=$EDITOR
 
+# ------------------------------------------------------------------------------
+# Clear view
+# ------------------------------------------------------------------------------
+alias c="clear"
+
+# ------------------------------------------------------------------------------
 # Apache Hosts
+# ------------------------------------------------------------------------------
 alias vhosts="e /private/etc/apache2/extra/httpd-vhosts.conf"
 
+# ------------------------------------------------------------------------------
 # System Hosts
+# ------------------------------------------------------------------------------
 alias hosts="e /etc/hosts"
 
+# ------------------------------------------------------------------------------
 # Quick Access Downloads
+# ------------------------------------------------------------------------------
 alias downloads="cd ~/Downloads/"
 
+# ------------------------------------------------------------------------------
 # View Recent Donwloads
+# ------------------------------------------------------------------------------
 alias downloads-view="sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'select LSQuarantineDataURLString from LSQuarantineEvent'"
 
+# ------------------------------------------------------------------------------
 # Delete Download History
+# ------------------------------------------------------------------------------
 alias downloads-deletehistory="sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"
 
-# Down a folder
+# ------------------------------------------------------------------------------
+# Up a folder tree
+# ------------------------------------------------------------------------------
 alias ..="cd .."
 
 # Back a folder action
@@ -42,7 +59,7 @@ alias l-dir='ls -l | grep "^d"'
 alias link='ln -s $1 $2'
 
 # Start server
-alias start-server='python -m SimpleHTTPServer $1'
+alias server='php -S $1'
 
 # Compress
 alias compress='tar -jcvf $1 $2'
@@ -52,9 +69,6 @@ alias uncompress='tar -jxvf $1'
 
 # Tell me the time
 alias thetime=date
-
-# Convert Easting/Northing to Lat/Long
-alias en-ll='php ~/sites/_scripts/en_to_ll.php'
 
 # Show/hide hidden files in Finder
 alias show="defaults write com.apple.Finder AppleShowAllFiles -bool true && killall Finder"
@@ -67,7 +81,7 @@ alias delete="rm -rf $1"
 alias delete-please="sudo rm -rf $1"
 
 # Run Javascript
-alias js=/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc
+alias js="/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc"
 
 # Copy public DSA key to clipboard
 alias sshkey="cat ~/.ssh/id_dsa.pub | pbcopy && echo 'Copied to clipboard.'"
