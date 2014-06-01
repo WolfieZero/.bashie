@@ -5,11 +5,8 @@
 # =============================================================================
 
 
-# Sites
-alias sites="cd ~/Sites/"
-
 # Development
-alias dev="cd ~/Development/"
+alias dev="cd ~/Dropbox/Development/"
 
 # Clients
 alias clients="cd ~/Clients/"
