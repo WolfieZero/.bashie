@@ -24,7 +24,9 @@ function todate () {
     notice_end
 }
 
-
+function server () {
+    php -S $@ | chrome http://$@
+}
 
 # Get IP
 function ip () {

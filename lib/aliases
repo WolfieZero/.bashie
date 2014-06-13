@@ -58,9 +58,6 @@ alias l-dir='ls -l | grep "^d"'
 # Symbolic Link
 alias link='ln -s $1 $2'
 
-# Start server
-alias server='php -S $1'
-
 # Compress
 alias compress='tar -jcvf $1 $2'
 
