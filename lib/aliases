@@ -8,6 +8,8 @@
 # Default editor
 alias e=$EDITOR
 
+alias editorconfig="wget https://gist.githubusercontent.com/WolfieZero/1651ee19e0c0f5fd11a4/raw/287267cdb58759ecc173d30a895b64dca51fc647/.editorconfig"
+
 # ------------------------------------------------------------------------------
 # Clear view
 # ------------------------------------------------------------------------------

@@ -9,7 +9,7 @@
 alias dev="cd ~/Dropbox/Development/"
 
 # Clients
-alias clients="cd ~/Clients/"
+alias clients="cd ~/Dropbox/ICE/Clients/"
 
 # Voluments
 alias vols="cd /Volumes/"
