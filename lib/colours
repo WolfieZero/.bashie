@@ -22,3 +22,5 @@ bWHITE='\e[1;37m'
 
 # Text Reset
 RESET='\e[0m'
+
+GREY='\e[0;37m'

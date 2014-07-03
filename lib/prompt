@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ `uname` = "Darwin" ]; then
-    PS1="\n\[$bBLACK\]\w\[$PURPLE\]\n$\[$RESET\] "
+    PS1="\n\[$GREY\]\w\[$PURPLE\]\n$\[$RESET\] "
 else
     PS1="\n\[$bBLACK\]["`hostname`"] \w\[$PURPLE\]\n$\[$RESET\] "
 fi

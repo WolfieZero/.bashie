@@ -30,7 +30,7 @@ function server () {
 
 # Get IP
 function ip () {
-    noitce-start
+    notice_start
     echo "Outside IP"
     dig +short myip.opendns.com @resolver1.opendns.com
     notice_end
