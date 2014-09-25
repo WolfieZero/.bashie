@@ -27,9 +27,10 @@ done
 
 if [ `uname` = "Darwin" ]; then
     export PATH=/usr/local/bin:$PATH
+    export PATH=~/.composer/vendor/bin:$PATH
     #export PATH="$(brew --prefix php53)/bin:$PATH"
-    export PATH="$(brew --prefix php54)/bin:$PATH"
-    #export PATH="$(brew --prefix php55)/bin:$PATH"
+    #export PATH="$(brew --prefix php54)/bin:$PATH"
+    export PATH="$(brew --prefix php55)/bin:$PATH"
 
     # VirtualBox Setup
     export PATH=$PATH:/Applications/VirtualBox.app/Contents/MacOS/
