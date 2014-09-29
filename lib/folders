@@ -11,8 +11,14 @@ alias dev="cd ~/Dropbox/Development/"
 # Clients
 alias clients="cd ~/Dropbox/ICE/Clients/"
 
-# Voluments
+# Volumes
 alias vols="cd /Volumes/"
 
-# Voluments
+# Dropbox
 alias box="cd ~/Dropbox/"
+
+# ICE
+alias ice="cd ~/Dropbox/ICE"
+
+# ICE Projects
+alias iceprojects="cd ~/Dropbox/ICE/Projects"
