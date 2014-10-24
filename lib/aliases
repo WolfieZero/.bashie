@@ -70,8 +70,8 @@ alias uncompress='tar -jxvf $1'
 alias thetime=date
 
 # Show/hide hidden files in Finder
-alias show="defaults write com.apple.Finder AppleShowAllFiles -bool true && killall Finder"
-alias hide="defaults write com.apple.Finder AppleShowAllFiles -bool false && killall Finder"
+alias show="defaults write com.apple.finder AppleShowAllFiles -boolean true ; killall Finder"
+alias hide="defaults write com.apple.finder AppleShowAllFiles -boolean false ; killall Finder"
 
 # Delete easily
 alias delete="rm -rf $1"
