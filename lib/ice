@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# =============================================================================
+# ICE Stuff
+# =============================================================================
+
+# ICE
+alias ice="cd ~/Dropbox/ICE"
+
+# ICE Projects
+alias iceprojects="cd ~/Dropbox/ICE/Project"
+
+# ICE Login
+alias icelogins="e ~/Dropbox/ICE/Logins"
