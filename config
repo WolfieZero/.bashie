@@ -10,5 +10,5 @@ DOWNLOADS_DIR="${HOME}/Downloads/"
 BASHIE_LIB="${HOME}/.bashie/lib"
 
 # Default editor
-EDITOR="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
-#EDITOR="atom"
+#EDITOR="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+EDITOR="atom"
