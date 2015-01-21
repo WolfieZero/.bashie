@@ -33,7 +33,7 @@ if [ `uname` = "Darwin" ]; then
     export PATH="$(brew --prefix php55)/bin:$PATH"
 
     # VirtualBox Setup
-    export PATH=$PATH:/Applications/VirtualBox.app/Contents/MacOS/
+    export PATH=$PATH:/Applications/VirtualBox.app/Contents/MacOS
 
 else
   notice_start

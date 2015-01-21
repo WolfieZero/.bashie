@@ -4,11 +4,11 @@
 # ICE Stuff
 # =============================================================================
 
-# ICE
-alias ice="cd ~/Dropbox/ICE"
+# Vagrant ICE box
+alias icebox="cd ~/icebox/"
 
 # ICE Projects
-alias iceprojects="cd ~/Dropbox/ICE/Project"
+alias iceprojects="cd ~/Project/"
 
 # ICE Login
 alias icelogins="e ~/Dropbox/ICE/Logins"

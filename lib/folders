@@ -8,20 +8,11 @@
 # Development
 alias dev="cd ~/Dropbox/Development/"
 
-# Clients
-alias clients="cd ~/Dropbox/ICE/Clients/"
-
 # Volumes
 alias vols="cd /Volumes/"
-
-# Vagrant boxes
-alias vboxes="cd ~/Dropbox/vagrant"
 
 # Dropbox
 alias box="cd ~/Dropbox/"
 
 # ICE
-alias ice="cd ~/Dropbox/ICE"
-
-# ICE Projects
-alias iceprojects="cd ~/Dropbox/ICE/Projects"
+alias docs="cd ~/Documents/"
