@@ -6,7 +6,7 @@
 
 
 # Development
-alias dev="cd ~/Dropbox/Development/"
+alias code="cd ~/Dropbox/Code/"
 
 # Volumes
 alias vols="cd /Volumes/"
