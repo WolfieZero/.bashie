@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Fuctions
+# Functions
 # -----------------------------------------------------------------------------
 
 
@@ -80,4 +80,17 @@ function toggleiTerm() {
 			;;
 	    esac
 	done
+}
+
+function fixssh() {
+    notice_start
+    echo 'Fixing ssh permissions'
+    notice_end
+
+    sudo chmod 600 ~/.ssh/id_rsa
+    sudo chmod 600 ~/.ssh/id_rsa.pub
+    sudo chmod 600 ~/.ssh/id_dsa
+    sudo chmod 600 ~/.ssh/id_dsa.pub
+    sudo chmod 644 ~/.ssh/known_hosts
+    sudo chmod 755 ~/.ssh
 }
